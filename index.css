@@ -1,0 +1,255 @@
+  html {
+            box-sizing: border-box;
+            height: 100%; /* Ensure html takes full height */
+          }
+
+          *, *::before, *::after {
+            box-sizing: inherit;
+          }
+
+          body {
+            font-family: "Inter", sans-serif; /* Keep font family here for global use */
+            height: 100%; /* Ensure body takes full height */
+            margin: 0; /* Remove default body margin */
+            overflow: hidden; /* Keep overflow hidden if desired */
+          }
+
+          @keyframes move {
+            100% {
+              transform: translate3d(0, 0, 1px) rotate(360deg);
+            }
+          }
+
+          /* This is the main container for your React app, taking the full screen */
+          .container_to_do { /* Changed to your class name */
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background: radial-gradient(circle, rgba(184, 193, 255, 1) 0%, rgba(78, 15, 117, 1) 100%); /* Your gradient */
+            overflow: hidden;
+            display: flex; /* Added flex for layout */
+            flex-direction: column; /* Arrange content vertically */
+            align-items: center; /* Center content horizontally */
+            padding: 1rem; /* Added padding */
+            color: #1f2937; /* Default text color */
+          }
+
+          .title{
+            color: white;
+            padding: 10px;
+            margin: 20px;
+          }
+          .ball {
+            position: absolute;
+            width: 20vmin;
+            height: 20vmin;
+            border-radius: 50%;
+            backface-visibility: hidden;
+            animation: move linear infinite;
+            z-index: -1;
+          }
+          .timecurrent{
+            color: white;
+          }
+
+          .ball:nth-child(odd) {
+            color: blue;
+          }
+
+          .ball:nth-child(even) {
+            color: white;
+          }
+
+          /* Using a custom attribute for variability */
+          .ball:nth-child(1) {
+            top: 40%;
+            left: 88%;
+            animation-duration: 40s;
+            animation-delay: -3s;
+            transform-origin: 5vw -2vh;
+            box-shadow: 40vmin 0 5.703076368487546vmin currentColor;
+          }
+          .ball:nth-child(2) {
+            top: 42%;
+            left: 2%;
+            animation-duration: 53s;
+            animation-delay: -29s;
+            transform-origin: -19vw 21vh;
+            box-shadow: -40vmin 0 5.17594621519026vmin currentColor;
+          }
+          .ball:nth-child(3) {
+            top: 28%;
+            left: 18%;
+            animation-duration: 49s;
+            animation-delay: -8s;
+            transform-origin: -22vw 3vh;
+            box-shadow: 40vmin 0 5.248179047256236vmin currentColor;
+          }
+          .ball:nth-child(4) {
+            top: 50%;
+            left: 79%;
+            animation-duration: 26s;
+            animation-delay: -21s;
+            transform-origin: -17vw -6vh;
+            box-shadow: 40vmin 0 5.279749632220298vmin currentColor;
+          }
+          .ball:nth-child(5) {
+            top: 46%;
+            left: 15%;
+            animation-duration: 36s;
+            animation-delay: -40s;
+            transform-origin: 4vw 0vh;
+            box-shadow: -40vmin 0 5.964309466052033vmin currentColor;
+          }
+          .ball:nth-child(6) {
+            top: 77%;
+            left: 16%;
+            animation-duration: 31s;
+            animation-delay: -10s;
+            transform-origin: 18vw 4vh;
+            box-shadow: 40vmin 0 5.178483653434181vmin currentColor;
+          }
+          .ball:nth-child(7) {
+            top: 22%;
+            left: 17%;
+            animation-duration: 55s;
+            animation-delay: -6s;
+            transform-origin: 1vw -23vh;
+            box-shadow: -40vmin 0 5.703026794398318vmin currentColor;
+          }
+          .ball:nth-child(8) {
+            top: 41%;
+            left: 47%;
+            animation-duration: 43s;
+            animation-delay: -28s;
+            transform-origin: 25vw -3vh;
+            box-shadow: 40vmin 0 5.196265905749415vmin currentColor;
+          }
+
+          h1{
+            text-align: center;
+          }
+
+          .input_button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 95px;
+            margin-bottom: 40px;
+            background-color: white;
+            gap: 10px;
+            border-radius: 15px; /* Slightly more rounded */
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            padding: 15px; /* Increase padding */
+          }
+          .input, .time, .date { /* Combined styles for all input types */
+            width: 25vw; /* Adjusted width for better spacing */
+            max-width: 450px; /* Max width for larger screens */
+            border-radius: 10px; /* More rounded corners */
+            height: 50px; /* Slightly taller */
+            border: 1px solid #d1d5db; /* Lighter border */
+            padding: 12px 15px; /* More padding */
+            font-size: 1.1rem; /* Slightly larger font */
+            outline: none;
+            transition: all 0.3s ease-in-out; /* Smooth transitions for all properties */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+          }
+
+          .input:focus, .time:focus, .date:focus{
+            border: 2px solid #6366f1; /* A more vibrant blue on focus */
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3); /* Ring effect on focus */
+          }
+
+          .Addbutton{
+            background: linear-gradient(to right, #6366f1, #8b5cf6); /* Gradient background */
+            color: white;
+            border: none;
+            border-radius: 10px; /* More rounded */
+            height: 50px; /* Match input height */
+            padding: 0 15px; /* Horizontal padding */
+            font-size: 1rem; /* Match input font size */
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+            transition: all 0.3s ease-in-out; /* Smooth transitions */
+           
+          }
+          .Addbutton:hover {
+            background: linear-gradient(to right, #4f46e5, #7c3aed); /* Darker gradient on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+          }
+          .Addbutton:active {
+            transform: translateY(0); /* Press down effect */
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow on active */
+          }
+
+          ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100%; /* Changed to 100% to avoid horizontal scroll */
+            max-width: 800px; /* Added max-width for better control on large screens */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+          }
+
+
+          .to_do_list {
+            padding: 0;
+            margin-bottom: 10px;
+            width: 100%; /* Ensure list item takes full width of ul */
+          }
+
+          .container_task {
+            display: flex;
+            align-items: center;
+            gap:10px; /* Increased gap */
+            background-color: white;
+            padding: 15px 20px; /* More padding */
+            border-radius: 10px; /* More rounded */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+            width: 100%;
+            justify-content: space-between; /* Space between task info and delete button */
+          }
+
+          .tasks{
+            display: flex;
+            flex-direction: column; /* Stack task and info vertically */
+            
+          }
+          .thetask {
+            font-size: 1.2rem; /* Larger task text */
+            font-weight: 600; /* Bolder task text */
+            color: #374151; /* Darker text color */
+          }
+          .taskinfo{
+            font-size: 0.85em; /* Slightly larger info text */
+            color: #6b7280; /* Consistent grey color */
+            margin-top: 4px; /* Small margin above info */
+          }
+          .deletebutton {
+            background: rgb(188, 44, 44); /* Reverted to your original color */
+            border: none;
+            color: white;
+            padding: 10px 15px; /* Adjusted padding */
+            border-radius: 8px; /* More rounded */
+            cursor: pointer;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); /* Shadow */
+            transition: all 0.2s ease-in-out; /* Smooth transition */
+            font-weight: 600; /* Bolder text */
+          }
+          .deletebutton:hover {
+            background-color: red; /* Reverted to your original hover color */
+            transform: translateY(-1px); /* Slight lift */
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+          }
+          .deletebutton:active {
+            transform: translateY(0); /* Press down */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Reset shadow */
+          }
