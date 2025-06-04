@@ -80,7 +80,5 @@ Start the development server:
 npm start
 
 
-This will open the application in your browser, usually at http://localhost:3000.
-
 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
