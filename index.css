@@ -8,10 +8,10 @@
           }
 
           body {
-            font-family: "Inter", sans-serif; /* Keep font family here for global use */
-            height: 100%; /* Ensure body takes full height */
-            margin: 0; /* Remove default body margin */
-            overflow: hidden; /* Keep overflow hidden if desired */
+            font-family: "Inter", sans-serif; 
+            height: 100%; 
+            margin: 0;
+            overflow: hidden;
           }
 
           @keyframes move {
@@ -20,7 +20,6 @@
             }
           }
 
-          /* This is the main container for your React app, taking the full screen */
           .container_to_do { /* Changed to your class name */
             position: fixed;
             width: 100vw;
@@ -29,11 +28,11 @@
             left: 0;
             background: radial-gradient(circle, rgba(184, 193, 255, 1) 0%, rgba(78, 15, 117, 1) 100%); /* Your gradient */
             overflow: hidden;
-            display: flex; /* Added flex for layout */
-            flex-direction: column; /* Arrange content vertically */
-            align-items: center; /* Center content horizontally */
-            padding: 1rem; /* Added padding */
-            color: #1f2937; /* Default text color */
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            padding: 1rem;
+            color: #1f2937; 
           }
 
           .title{
@@ -140,58 +139,58 @@
             margin-bottom: 40px;
             background-color: white;
             gap: 10px;
-            border-radius: 15px; /* Slightly more rounded */
+            border-radius: 15px;  
             width: 100%;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
-            padding: 15px; /* Increase padding */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+            padding: 15px; 
           }
-          .input, .time, .date { /* Combined styles for all input types */
-            width: 25vw; /* Adjusted width for better spacing */
-            max-width: 450px; /* Max width for larger screens */
-            border-radius: 10px; /* More rounded corners */
-            height: 50px; /* Slightly taller */
-            border: 1px solid #d1d5db; /* Lighter border */
-            padding: 12px 15px; /* More padding */
-            font-size: 1.1rem; /* Slightly larger font */
+          .input, .time, .date { 
+            width: 25vw; 
+            max-width: 450px;
+            border-radius: 10px;
+            height: 50px;
+            border: 1px solid #d1d5db; 
+            padding: 12px 15px;
+            font-size: 1.1rem; 
             outline: none;
-            transition: all 0.3s ease-in-out; /* Smooth transitions for all properties */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+            transition: all 0.3s ease-in-out; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
           }
 
           .input:focus, .time:focus, .date:focus{
-            border: 2px solid #6366f1; /* A more vibrant blue on focus */
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3); /* Ring effect on focus */
+            border: 2px solid #6366f1; 
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3); 
           }
 
           .Addbutton{
-            background: linear-gradient(to right, #6366f1, #8b5cf6); /* Gradient background */
+            background: linear-gradient(to right, #6366f1, #8b5cf6); 
             color: white;
             border: none;
-            border-radius: 10px; /* More rounded */
-            height: 50px; /* Match input height */
-            padding: 0 15px; /* Horizontal padding */
-            font-size: 1rem; /* Match input font size */
+            border-radius: 10px; 
+            height: 50px; 
+            padding: 0 15px; 
+            font-size: 1rem; 
             cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
-            transition: all 0.3s ease-in-out; /* Smooth transitions */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
            
           }
           .Addbutton:hover {
-            background: linear-gradient(to right, #4f46e5, #7c3aed); /* Darker gradient on hover */
-            transform: translateY(-2px); /* Slight lift effect */
-            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+            background: linear-gradient(to right, #4f46e5, #7c3aed); 
+            transform: translateY(-2px); 
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3); 
           }
           .Addbutton:active {
-            transform: translateY(0); /* Press down effect */
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow on active */
+            transform: translateY(0);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
           }
 
           ul {
             list-style: none;
             margin: 0;
             padding: 0;
-            width: 100%; /* Changed to 100% to avoid horizontal scroll */
-            max-width: 800px; /* Added max-width for better control on large screens */
+            width: 100%; 
+            max-width: 800px; 
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -203,53 +202,53 @@
           .to_do_list {
             padding: 0;
             margin-bottom: 10px;
-            width: 100%; /* Ensure list item takes full width of ul */
+            width: 100%; 
           }
 
           .container_task {
             display: flex;
             align-items: center;
-            gap:10px; /* Increased gap */
+            gap:10px; 
             background-color: white;
-            padding: 15px 20px; /* More padding */
-            border-radius: 10px; /* More rounded */
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+            padding: 15px 20px; 
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); 
             width: 100%;
-            justify-content: space-between; /* Space between task info and delete button */
+            justify-content: space-between;
           }
 
           .tasks{
             display: flex;
-            flex-direction: column; /* Stack task and info vertically */
+            flex-direction: column; 
             
           }
           .thetask {
-            font-size: 1.2rem; /* Larger task text */
-            font-weight: 600; /* Bolder task text */
-            color: #374151; /* Darker text color */
+            font-size: 1.2rem; 
+            font-weight: 600; 
+            color: #374151; 
           }
           .taskinfo{
-            font-size: 0.85em; /* Slightly larger info text */
-            color: #6b7280; /* Consistent grey color */
-            margin-top: 4px; /* Small margin above info */
+            font-size: 0.85em; 
+            color: #6b7280;
+            margin-top: 4px; 
           }
           .deletebutton {
-            background: rgb(188, 44, 44); /* Reverted to your original color */
+            background: rgb(188, 44, 44); 
             border: none;
             color: white;
-            padding: 10px 15px; /* Adjusted padding */
-            border-radius: 8px; /* More rounded */
+            padding: 10px 15px; 
+            border-radius: 8px; 
             cursor: pointer;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); /* Shadow */
-            transition: all 0.2s ease-in-out; /* Smooth transition */
-            font-weight: 600; /* Bolder text */
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); 
+            transition: all 0.2s ease-in-out; 
+            font-weight: 600;
           }
           .deletebutton:hover {
-            background-color: red; /* Reverted to your original hover color */
-            transform: translateY(-1px); /* Slight lift */
-            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+            background-color: red; 
+            transform: translateY(-1px); 
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2); 
           }
           .deletebutton:active {
-            transform: translateY(0); /* Press down */
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Reset shadow */
+            transform: translateY(0); 
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); 
           }
